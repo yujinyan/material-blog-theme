@@ -1,0 +1,1985 @@
+/*
+Theme Name: material-blog
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 0.0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: material-blog
+Tags:
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+
+material-blog is based on Underscores http://underscores.me/, (C) 2012-2015 Automattic, Inc.
+Underscores is distributed under the terms of the GNU GPL v2 or later.
+
+Normalizing styles have been helped along thanks to the fine work of
+Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
+*/
+
+/*--------------------------------------------------------------
+>>> TABLE OF CONTENTS:
+----------------------------------------------------------------
+# Normalize
+# Typography
+# Elements
+# Forms
+# Navigation
+	## Links
+	## Menus
+# Accessibility
+# Alignments
+# Clearings
+# Widgets
+# Content
+	## Posts and pages
+	## Asides
+	## Comments
+# Infinite scroll
+# Media
+	## Captions
+	## Galleries
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+# Normalize
+--------------------------------------------------------------*/
+html {
+	font-family: sans-serif;
+	/* 1 */
+	-ms-text-size-adjust: 100%;
+	/* 2 */
+	-webkit-text-size-adjust: 100%;
+	/* 2 */
+}
+body {
+	margin: 0;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+	display: block;
+}
+
+audio,
+canvas,
+progress,
+video {
+	display: inline-block;
+	/* 1 */
+	vertical-align: baseline;
+	/* 2 */
+}
+
+
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+
+
+[hidden],
+template {
+	display: none;
+}
+
+
+a {
+	background-color: transparent;
+}
+
+
+a:active,
+a:hover {
+	outline: 0;
+}
+
+
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+
+
+b,
+strong {
+	font-weight: bold;
+}
+
+
+dfn {
+	font-style: italic;
+}
+
+h1 {
+	font-size: 2em;
+	margin: .67em 0;
+}
+
+mark {
+	background: #ff0;
+	color: #000;
+}
+
+small {
+	font-size: 80%;
+}
+
+sub,
+sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+
+sup {
+	top: -.5em;
+}
+
+sub {
+	bottom: -.25em;
+}
+
+
+img {
+	border: 0;
+}
+
+svg:not(:root) {
+	overflow: hidden;
+}
+
+figure {
+	margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+	box-sizing: content-box;
+	height: 0;
+}
+
+pre {
+	overflow: auto;
+}
+
+
+code,
+kbd,
+pre,
+samp {
+	font-family: monospace, monospace;
+	font-size: 1em;
+}
+
+
+button,
+input,
+optgroup,
+select,
+textarea {
+	color: inherit;
+	/* 1 */
+	font: inherit;
+	/* 2 */
+	margin: 0;
+	/* 3 */
+}
+
+
+button {
+	overflow: visible;
+}
+
+button,
+select {
+	text-transform: none;
+}
+
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	-webkit-appearance: button;
+	/* 2 */
+	cursor: pointer;
+	/* 3 */
+}
+
+button[disabled],
+html input[disabled] {
+	cursor: default;
+}
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+	border: 0;
+	padding: 0;
+}
+
+input {
+	line-height: normal;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+	box-sizing: border-box;
+	/* 1 */
+	padding: 0;
+	/* 2 */
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	height: auto;
+}
+
+input[type="search"] {
+	-webkit-appearance: textfield;
+	/* 1 */
+	box-sizing: content-box;
+	/* 2 */
+}
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+	-webkit-appearance: none;
+}
+
+
+fieldset {
+	border: 1px solid #c0c0c0;
+	margin: 0 2px;
+	padding: .35em .625em .75em;
+}
+
+legend {
+	border: 0;
+	/* 1 */
+	padding: 0;
+	/* 2 */
+}
+
+textarea {
+	overflow: auto;
+}
+
+optgroup {
+	font-weight: bold;
+}
+
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+/**
+ * The Four Typefaces: Heiti
+ *  四大字體集・黑體
+ */
+@font-face {
+	font-family: "Han Heiti";
+	src: local("Hiragino Sans GB"), local("Lantinghei TC Extralight"), local("Lantinghei SC Extralight"), local(FZLTXHB--B51-0), local(FZLTZHK--GBK1-0), local(".PingFang SC Light"), local(".PingFang TC Light"), local(".PingFang-SC-Light"), local(".PingFang-TC-Light"), local(".PingFang SC"), local(".PingFang TC"), local("Heiti SC Light"), local(STHeitiSC-Light), local("Heiti SC"), local("Heiti TC Light"), local(STHeitiTC-Light), local("Heiti TC"), local("Microsoft Yahei"), local("Microsoft Jhenghei"), local("Noto Sans CJK KR"), local("Noto Sans CJK JP"), local("Noto Sans CJK SC"), local("Noto Sans CJK TC"), local("Source Han Sans K"), local("Source Han Sans KR"), local("Source Han Sans JP"), local("Source Han Sans CN"), local("Source Han Sans HK"), local("Source Han Sans TW"), local("Source Han Sans TWHK"), local("Droid Sans Fallback");
+}
+
+@font-face {
+	unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+	font-family: "Han Heiti";
+	src: local(YuGothic), local("Hiragino Kaku Gothic ProN"), local("Hiragino Kaku Gothic Pro");
+}
+
+@font-face {
+	font-family: "Han Heiti CNS";
+	src: local(".PingFang TC Light"), local(".PingFang-TC-Light"), local(".PingFang TC"), local("Heiti TC Light"), local(STHeitiTC-Light), local("Heiti TC"), local("Lantinghei TC Extralight"), local(FZLTXHB--B51-0), local("Lantinghei TC"), local("Microsoft Jhenghei"), local("Microsoft Yahei"), local("Noto Sans CJK TC"), local("Source Han Sans TC"), local("Source Han Sans TW"), local("Source Han Sans TWHK"), local("Source Han Sans HK"), local("Droid Sans Fallback");
+}
+
+@font-face {
+	font-family: "Han Heiti GB";
+	src: local("Hiragino Sans GB"), local(".PingFang SC Light"), local(".PingFang-SC-Light"), local(".PingFang SC"), local("Lantinghei SC Extralight"), local(FZLTXHK--GBK1-0), local("Lantinghei SC"), local("Heiti SC Light"), local(STHeitiSC-Light), local("Heiti SC"), local("Microsoft Yahei"), local("Noto Sans CJK SC"), local("Source Han Sans SC"), local("Source Han Sans CN"), local("Droid Sans Fallback");
+}
+
+/*
+ * Bold
+ */
+@font-face {
+	font-family: "Han Heiti";
+	font-weight: 600;
+	src: local("Hiragino Sans GB W6"), local(HiraginoSansGB-W6), local("Lantinghei TC Demibold"), local("Lantinghei SC Demibold"), local(FZLTZHB--B51-0), local(FZLTZHK--GBK1-0), local(".PingFang-SC-Semibold"), local(".PingFang-TC-Semibold"), local("Heiti SC Medium"), local("STHeitiSC-Medium"), local("Heiti SC"), local("Heiti TC Medium"), local("STHeitiTC-Medium"), local("Heiti TC"), local("Microsoft YaHei Bold"), local("Microsoft Jhenghei Bold"), local(MicrosoftYaHei-Bold), local(MicrosoftJhengHeiBold), local("Microsoft YaHei"), local("Microsoft Jhenghei"), local("Noto Sans CJK KR Bold"), local("Noto Sans CJK JP Bold"), local("Noto Sans CJK SC Bold"), local("Noto Sans CJK TC Bold"), local(NotoSansCJKkr-Bold), local(NotoSansCJKjp-Bold), local(NotoSansCJKsc-Bold), local(NotoSansCJKtc-Bold), local("Source Han Sans K Bold"), local(SourceHanSansK-Bold), local("Source Han Sans K"), local("Source Han Sans KR Bold"), local("Source Han Sans JP Bold"), local("Source Han Sans CN Bold"), local("Source Han Sans HK Bold"), local("Source Han Sans TW Bold"), local("Source Han Sans TWHK Bold"), local("SourceHanSansKR-Bold"), local("SourceHanSansJP-Bold"), local("SourceHanSansCN-Bold"), local("SourceHanSansHK-Bold"), local("SourceHanSansTW-Bold"), local("SourceHanSansTWHK-Bold"), local("Source Han Sans KR"), local("Source Han Sans CN"), local("Source Han Sans HK"), local("Source Han Sans TW"), local("Source Han Sans TWHK");
+}
+
+@font-face {
+	unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+	font-family: "Han Heiti";
+	font-weight: 600;
+	src: local("YuGothic Bold"), local("Hiragino Kaku Gothic ProN W6"), local("Hiragino Kaku Gothic Pro W6"), local(YuGo-Bold), local(HiraKakuProN-W6), local(HiraKakuPro-W6);
+}
+
+@font-face {
+	font-family: "Han Heiti CNS";
+	font-weight: 600;
+	src: local(".PingFang TC Semibold"), local(".PingFang-TC-Semibold"), local("Heiti TC Medium"), local("STHeitiTC-Medium"), local("Heiti TC"), local("Lantinghei TC Demibold"), local(FZLTXHB--B51-0), local("Microsoft Jhenghei Bold"), local(MicrosoftJhengHeiBold), local("Microsoft Jhenghei"), local("Microsoft YaHei Bold"), local(MicrosoftYaHei-Bold), local("Noto Sans CJK TC Bold"), local(NotoSansCJKtc-Bold), local("Noto Sans CJK TC"), local("Source Han Sans TC Bold"), local("SourceHanSansTC-Bold"), local("Source Han Sans TC"), local("Source Han Sans TW Bold"), local("SourceHanSans-TW"), local("Source Han Sans TW"), local("Source Han Sans TWHK Bold"), local("SourceHanSans-TWHK"), local("Source Han Sans TWHK"), local("Source Han Sans HK"), local("SourceHanSans-HK"), local("Source Han Sans HK");
+}
+
+@font-face {
+	font-family: "Han Heiti GB";
+	font-weight: 600;
+	src: local("Hiragino Sans GB W6"), local(HiraginoSansGB-W6), local(".PingFang SC Semibold"), local(".PingFang-SC-Semibold"), local("Lantinghei SC Demibold"), local(FZLTZHK--GBK1-0), local("Heiti SC Medium"), local("STHeitiSC-Medium"), local("Heiti SC"), local("Microsoft YaHei Bold"), local(MicrosoftYaHei-Bold), local("Microsoft YaHei"), local("Noto Sans CJK SC Bold"), local(NotoSansCJKsc-Bold), local("Noto Sans CJK SC"), local("Source Han Sans SC Bold"), local("SourceHanSansSC-Bold"), local("Source Han Sans CN Bold"), local("SourceHanSansCN-Bold"), local("Source Han Sans SC"), local("Source Han Sans CN");
+}
+
+/* Address solution to `unicode-range` unsupported
+ * issues in Firefox
+ */
+@font-face {
+	font-family: "Han Heiti";
+	src: local("Hiragino Sans GB"), local("Lantinghei TC Extralight"), local("Lantinghei SC Extralight"), local(FZLTXHB--B51-0), local(FZLTZHK--GBK1-0), local(".PingFang SC Light"), local(".PingFang TC Light"), local(".PingFang-SC-Light"), local(".PingFang-TC-Light"), local(".PingFang SC"), local(".PingFang TC"), local("Heiti SC Light"), local("STHeitiSC-Light"), local("Heiti SC"), local("Heiti TC Light"), local("STHeitiTC-Light"), local("Heiti TC"), local("Microsoft Yahei"), local("Microsoft Jhenghei"), local("Noto Sans CJK KR"), local("Noto Sans CJK JP"), local("Noto Sans CJK SC"), local("Noto Sans CJK TC"), local("Source Han Sans K"), local("Source Han Sans KR"), local("Source Han Sans JP"), local("Source Han Sans CN"), local("Source Han Sans HK"), local("Source Han Sans TW"), local("Source Han Sans TWHK"), local("Droid Sans Fallback");
+	unicode-range: U+270C;
+}
+
+@font-face {
+	font-family: "Han Heiti";
+	font-weight: 600;
+	src: local("Hiragino Sans GB W6"), local(HiraginoSansGB-W6), local("Lantinghei TC Demibold"), local("Lantinghei SC Demibold"), local(FZLTZHB--B51-0), local(FZLTZHK--GBK1-0), local(".PingFang-SC-Semibold"), local(".PingFang-TC-Semibold"), local("Heiti SC Medium"), local("STHeitiSC-Medium"), local("Heiti SC"), local("Heiti TC Medium"), local("STHeitiTC-Medium"), local("Heiti TC"), local("Microsoft YaHei Bold"), local("Microsoft Jhenghei Bold"), local(MicrosoftYaHei-Bold), local(MicrosoftJhengHeiBold), local("Microsoft YaHei"), local("Microsoft Jhenghei"), local("Noto Sans CJK KR Bold"), local("Noto Sans CJK JP Bold"), local("Noto Sans CJK SC Bold"), local("Noto Sans CJK TC Bold"), local(NotoSansCJKkr-Bold), local(NotoSansCJKjp-Bold), local(NotoSansCJKsc-Bold), local(NotoSansCJKtc-Bold), local("Source Han Sans K Bold"), local(SourceHanSansK-Bold), local("Source Han Sans K"), local("Source Han Sans KR Bold"), local("Source Han Sans JP Bold"), local("Source Han Sans CN Bold"), local("Source Han Sans HK Bold"), local("Source Han Sans TW Bold"), local("Source Han Sans TWHK Bold"), local("SourceHanSansKR-Bold"), local("SourceHanSansJP-Bold"), local("SourceHanSansCN-Bold"), local("SourceHanSansHK-Bold"), local("SourceHanSansTW-Bold"), local("SourceHanSansTWHK-Bold"), local("Source Han Sans KR"), local("Source Han Sans CN"), local("Source Han Sans HK"), local("Source Han Sans TW"), local("Source Han Sans TWHK");
+	unicode-range: U+270C;
+}
+
+/**
+ * The Four Typefaces: Songti (serif)
+ * 四大字體集・宋體
+ */
+@font-face {
+	font-family: "Han Songti";
+	src: local("Songti SC Regular"), local(STSongti-SC-Regular), local("Songti SC"), local("Songti TC Regular"), local(STSongti-TC-Regular), local("Songti TC"), local(STSong), local("Lisong Pro"), local(SimSun), local(PMingLiU);
+}
+
+@font-face {
+	unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+	font-family: "Han Songti";
+	src: local(YuMincho), local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("MS Mincho");
+}
+
+@font-face {
+	font-family: "Han Songti CNS";
+	src: local("Songti TC Regular"), local(STSongti-TC-Regular), local("Songti TC"), local("Lisong Pro"), local("Songti SC Regular"), local(STSongti-SC-Regular), local("Songti SC"), local(STSong), local(PMingLiU), local(SimSun);
+}
+
+@font-face {
+	font-family: "Han Songti GB";
+	src: local("Songti SC Regular"), local(STSongti-SC-Regular), local("Songti SC"), local(STSong), local(SimSun), local(PMingLiU);
+}
+
+/*
+ * Bold
+ */
+@font-face {
+	font-family: "Han Songti";
+	font-weight: 600;
+	src: local("STSongti SC Bold"), local("STSongti TC Bold"), local(STSongti-SC-Bold), local(STSongti-TC-Bold), local("STSongti SC"), local("STSongti TC");
+}
+
+@font-face {
+	unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+	font-family: "Han Songti";
+	font-weight: 600;
+	src: local("YuMincho Demibold"), local("Hiragino Mincho ProN W6"), local("Hiragino Mincho Pro W6"), local(YuMin-Demibold), local(HiraMinProN-W6), local(HiraMinPro-W6), local(YuMincho), local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro");
+}
+
+@font-face {
+	font-family: "Han Songti CNS";
+	font-weight: 600;
+	src: local("STSongti TC Bold"), local("STSongti SC Bold"), local(STSongti-TC-Bold), local(STSongti-SC-Bold), local("STSongti TC"), local("STSongti SC");
+}
+
+@font-face {
+	font-family: "Han Songti GB";
+	font-weight: 600;
+	src: local("STSongti SC Bold"), local(STSongti-SC-Bold), local("STSongti SC");
+}
+
+/* Address solution to `unicode-range` unsupported
+ * issues in Firefox.
+ */
+@font-face {
+	font-family: "Han Songti";
+	src: local("Songti SC Regular"), local(STSongti-SC-Regular), local("Songti SC"), local("Songti TC Regular"), local(STSongti-TC-Regular), local("Songti TC"), local(STSongti), local("Lisong Pro"), local("MS Mincho"), local(SimSun), local(PMingLiU);
+	unicode-range: U+270C;
+}
+
+@font-face {
+	font-family: "Han Songti";
+	font-weight: 600;
+	src: local("Songti TC Bold"), local("Songti SC Bold"), local(STSongti-TC-Bold), local(STSongti-SC-Bold), local("Songti TC"), local("Songti SC");
+	unicode-range: U+270C;
+}
+
+@font-face {
+	font-family: "Han Songti CNS";
+	src: local("Songti TC Regular"), local("Lisong Pro"), local("Songti TC"), local("Songti SC Regular"), local(STSong), local("Songti SC"), local("MS Mincho"), local(PMingLiU), local(SimSun);
+	unicode-range: U+270C;
+}
+
+@font-face {
+	font-family: "Han Songti CNS";
+	font-weight: 600;
+	src: local("Songti TC Bold"), local("Songti SC Bold"), local(STSongti-TC-Bold), local(STSongti-SC-Bold), local("Songti TC"), local("Songti SC");
+	unicode-range: U+270C;
+}
+
+@font-face {
+	font-family: "Han Songti GB";
+	src: local("Songti SC"), local(STSong), local(SimSun);
+	unicode-range: U+270C;
+}
+
+@font-face {
+	font-family: "Han Songti GB";
+	font-weight: 600;
+	src: local("Songti SC Bold"), local(STSongti-SC-Bold), local("Songti SC");
+	unicode-range: U+270C;
+}
+
+/**
+ * The Four Typefaces: Kaiti (Cursive)
+ * 四大字體集・楷體
+ */
+@font-face {
+	font-family: cursive;
+	src: local("Kaiti TC Regular"), local(STKaiTi-TC-Regular), local("Kaiti TC"), local("Kaiti SC"), local(STKaiti), local(BiauKai), local("標楷體"), local(DFKaiShu-SB-Estd-BF), local(Kaiti), local(DFKai-SB);
+}
+
+@font-face {
+	unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+	font-family: "Han Kaiti";
+	src: local("Kaiti TC Regular"), local(STKaiTi-TC-Regular), local("Kaiti TC"), local("Kaiti SC"), local(STKaiti), local(BiauKai), local("標楷體"), local(DFKaiShu-SB-Estd-BF), local(Kaiti), local(DFKai-SB);
+}
+
+@font-face {
+	unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+	font-family: "Han Kaiti CNS";
+	src: local(BiauKai), local("標楷體"), local(DFKaiShu-SB-Estd-BF), local("Kaiti TC Regular"), local(STKaiTi-TC-Regular), local("Kaiti TC");
+}
+
+@font-face {
+	unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+	font-family: "Han Kaiti GB";
+	src: local("Kaiti SC Regular"), local(STKaiTi-SC-Regular), local("Kaiti SC"), local(STKaiti), local(Kai), local(Kaiti), local(DFKai-SB);
+}
+
+/*
+ * Bold
+ */
+@font-face {
+	font-family: cursive;
+	font-weight: 600;
+	src: local("Kaiti TC Bold"), local(STKaiTi-TC-Bold), local("Kaiti SC Bold"), local(STKaiti-SC-Bold), local("Kaiti TC"), local("Kaiti SC");
+}
+
+@font-face {
+	font-family: "Han Kaiti";
+	font-weight: 600;
+	src: local("Kaiti TC Bold"), local(STKaiTi-TC-Bold "),\a     local(" Kaiti SC Bold "),\a     local(STKaiti-SC-Bold),\a     local(" Kaiti TC "),\a     local(" Kaiti SC ")\a   ;\a }\a \a // 2\a @font-face {\a   font-family: " Han Kaiti CNS ";\a   font-weight: 600;\a   src:\a     local(" Kaiti TC Bold "),\a     local(STKaiTi-TC-Bold"), local("Kaiti TC");
+}
+
+@font-face {
+	font-family: "Han Kaiti GB";
+	font-weight: 600;
+	src: local("Kaiti SC Bold"), local(STKaiti-SC-Bold);
+}
+
+/**
+ * The Four Typefaces: Fangsong
+ * 四大字體集・仿宋體
+ */
+@font-face {
+	unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+	font-family: "Han Fangsong";
+	src: local(STFangsong), local(FangSong);
+}
+
+@font-face {
+	unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+	font-family: "Han Fangsong CNS";
+	src: local(STFangsong), local(FangSong);
+}
+
+@font-face {
+	unicode-range: U+4E00-9FFF, U+3400-4DB5, U+20000-2A6D6, U+2A700-2B734, U+2B740-2B81D, U+FA0E-FA0F, U+FA11, U+FA13-FA14, U+FA1F, U+FA21, U+FA23, U+FA24, U+FA27-FA29, U+3040-309F, U+30A0-30FF, U+3099-309E, U+FF66-FF9F, U+3007, U+31C0-31E3, U+2F00-2FD5, U+2E80-2EF3;
+	font-family: "Han Fangsong GB";
+	src: local(STFangsong), local(FangSong);
+}
+
+/**
+ * Basic correction to CJK punctuation
+ * ‘Biaodian’(zh) and ‘Yakumono’(ja)
+ */
+/* Fullwidth full stop (．) */
+@font-face {
+	font-family: "Biaodian Sans";
+	src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local("MS Gothic"), local(SimSun);
+	unicode-range: U+FF0E;
+}
+
+@font-face {
+	font-family: "Biaodian Serif";
+	src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Songti SC"), local(STSong), local(SimSun);
+	unicode-range: U+FF0E;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Sans";
+	src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local("MS Gothic"), local(SimSun);
+	unicode-range: U+FF0E;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Serif";
+	src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Songti SC"), local(STSong), local(SimSun);
+	unicode-range: U+FF0E;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Sans CNS";
+	src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local("MS Gothic"), local(SimSun);
+	unicode-range: U+FF0E;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Serif CNS";
+	src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Songti SC"), local(STSong), local(SimSun);
+	unicode-range: U+FF0E;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Sans GB";
+	src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local("MS Gothic"), local(SimSun);
+	unicode-range: U+FF0E;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Serif GB";
+	src: local("Hiragino Mincho ProN"), local("Hiragino Mincho Pro"), local("Songti SC"), local(STSong), local(SimSun);
+	unicode-range: U+FF0E;
+}
+
+/* Middle dot (·) */
+@font-face {
+	font-family: "Biaodian Sans";
+	src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local(SimSun);
+	unicode-range: U+00B7;
+}
+
+@font-face {
+	font-family: "Biaodian Serif";
+	src: local("Songti SC"), local(STSong), local("Heiti SC"), local(SimSun);
+	unicode-range: U+00B7;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Sans";
+	src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local(SimSun);
+	unicode-range: U+00B7;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Serif";
+	src: local("Songti SC"), local(STSong), local("Heiti SC"), local(SimSun);
+	unicode-range: U+00B7;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Sans CNS";
+	src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local(SimSun);
+	unicode-range: U+00B7;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Serif CNS";
+	src: local("Songti SC"), local(STSong), local("Heiti SC"), local(SimSun);
+	unicode-range: U+00B7;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Sans GB";
+	src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local(SimSun);
+	unicode-range: U+00B7;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Serif GB";
+	src: local("Songti SC"), local(STSong), local("Heiti SC"), local(SimSun);
+	unicode-range: U+00B7;
+}
+
+
+/* Curve quotes (“‘’”, GB-only) */
+@font-face {
+	font-family: "Biaodian Pro Sans GB";
+	src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local(SimSun), local(PMingLiU);
+	unicode-range: U+201C-201D, U+2018-2019;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Sans GB";
+	font-weight: bold;
+	src: local("Hiragino Sans GB"), local("Heiti SC"), local(STHeiti), local(SimSun), local(PMingLiU);
+	unicode-range: U+201C-201D, U+2018-2019;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Serif GB";
+	src: local("Lisong Pro"), local("Heiti SC"), local(STHeiti), local(SimSun), local(PMingLiU);
+	unicode-range: U+201C-201D, U+2018-2019;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Serif GB";
+	font-weight: bold;
+	src: local("Lisong Pro"), local("Heiti SC"), local(STHeiti), local(SimSun), local(PMingLiU);
+	unicode-range: U+201C-201D, U+2018-2019;
+}
+
+/* Default emphasis mark (•) */
+@font-face {
+	font-family: "Biaodian Sans";
+	src: local(Georgia), local("Times New Roman"), local(Arial), local("Droid Sans Fallback");
+	unicode-range: U+25CF;
+}
+
+@font-face {
+	font-family: "Biaodian Serif";
+	src: local(Georgia), local("Times New Roman"), local(Arial), local("Droid Sans Fallback");
+	unicode-range: U+25CF;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Sans";
+	src: local(Georgia), local("Times New Roman"), local(Arial), local("Droid Sans Fallback");
+	unicode-range: U+25CF;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Serif";
+	src: local(Georgia), local("Times New Roman"), local(Arial), local("Droid Sans Fallback");
+	unicode-range: U+25CF;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Sans CNS";
+	src: local(Georgia), local("Times New Roman"), local(Arial), local("Droid Sans Fallback");
+	unicode-range: U+25CF;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Serif CNS";
+	src: local(Georgia), local("Times New Roman"), local(Arial), local("Droid Sans Fallback");
+	unicode-range: U+25CF;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Sans GB";
+	src: local(Georgia), local("Times New Roman"), local(Arial), local("Droid Sans Fallback");
+	unicode-range: U+25CF;
+}
+
+@font-face {
+	font-family: "Biaodian Pro Serif GB";
+	src: local(Georgia), local("Times New Roman"), local(Arial), local("Droid Sans Fallback");
+	unicode-range: U+25CF;
+}
+
+body,
+button,
+input,
+select,
+textarea {
+	color: #404040;
+	/*font-family: sans-serif;*/
+	font-size: 16px;
+	font-size: 1rem;
+	line-height: 1.5;
+}
+
+html:lang(zh-Latn),
+html:lang(ja-Latn),
+html:not(:lang(zh)):not(:lang(ja)),
+html *:lang(zh-Latn),
+html *:lang(ja-Latn),
+html *:not(:lang(zh)):not(:lang(ja)),
+article strong:lang(zh-Latn),
+article strong:lang(ja-Latn),
+article strong:not(:lang(zh)):not(:lang(ja)),
+article strong *:lang(zh-Latn),
+article strong *:lang(ja-Latn),
+article strong *:not(:lang(zh)):not(:lang(ja)) {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Han Heiti", sans-serif;
+}
+
+html:lang(zh),
+html:lang(zh-Hant),
+[lang^="zh"],
+[lang*="Hant"],
+[lang="zh-TW"],
+[lang="zh-HK"],
+article strong:lang(zh),
+article strong:lang(zh-Hant) {
+	font-family: "Biaodian Pro Sans CNS", "Helvetica Neue", Helvetica, Arial, "Zhuyin Heiti", "Han Heiti", sans-serif;
+}
+
+
+html:lang(zh-Hans),
+html:lang(zh-CN),
+[lang*="Hans"],
+[lang="zh-CN"],
+article strong:lang(zh-Hans),
+article strong:lang(zh-CN) {
+	font-family: "Biaodian Pro Sans GB", "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
+}
+
+/**
+ * Sans Italic
+ */
+article blockquote i:lang(zh-Latn),
+article blockquote i:lang(ja-Latn),
+article blockquote i:not(:lang(zh)):not(:lang(ja)),
+article blockquote i *:lang(zh-Latn),
+article blockquote i *:lang(ja-Latn),
+article blockquote i *:not(:lang(zh)):not(:lang(ja)),
+article blockquote var:lang(zh-Latn),
+article blockquote var:lang(ja-Latn),
+article blockquote var:not(:lang(zh)):not(:lang(ja)),
+article blockquote var *:lang(zh-Latn),
+article blockquote var *:lang(ja-Latn),
+article blockquote var *:not(:lang(zh)):not(:lang(ja)) {
+	font-family: "Latin Italic Sans", "Helvetica Neue", Helvetica, Arial, "Han Heiti", sans-serif;
+}
+
+article blockquote i:lang(zh),
+article blockquote i:lang(zh-Hant),
+article blockquote var:lang(zh),
+article blockquote var:lang(zh-Hant) {
+	font-family: "Biaodian Pro Sans CNS", "Latin Italic Sans", "Helvetica Neue", Helvetica, Arial, "Zhuyin Heiti", "Han Heiti", sans-serif;
+}
+
+.no-unicoderange article blockquote i:lang(zh),
+.no-unicoderange article blockquote i:lang(zh-Hant),
+.no-unicoderange article blockquote var:lang(zh),
+.no-unicoderange article blockquote var:lang(zh-Hant) {
+	font-family: "Latin Italic Sans", "Helvetica Neue", Helvetica, Arial, "Han Heiti", sans-serif;
+}
+
+.no-unicoderange article blockquote i:lang(zh),
+.no-unicoderange article blockquote i:lang(zh-Hant),
+.no-unicoderange article blockquote var:lang(zh),
+.no-unicoderange article blockquote var:lang(zh-Hant) {
+	font-family: "Latin Italic Sans", "Helvetica Neue", Helvetica, Arial, "Han Heiti", sans-serif;
+}
+
+article blockquote i:lang(zh-Hans),
+article blockquote i:lang(zh-CN),
+article blockquote var:lang(zh-Hans),
+article blockquote var:lang(zh-CN) {
+	font-family: "Biaodian Pro Sans GB", "Latin Italic Sans", "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
+}
+
+.no-unicoderange article blockquote i:lang(zh-Hans),
+.no-unicoderange article blockquote i:lang(zh-CN),
+.no-unicoderange article blockquote var:lang(zh-Hans),
+.no-unicoderange article blockquote var:lang(zh-CN) {
+	font-family: "Latin Italic Sans", "Helvetica Neue", Helvetica, Arial, "Han Heiti GB", sans-serif;
+}
+
+article blockquote i:lang(ja),
+article blockquote var:lang(ja) {
+	font-family: "Yakumono Sans", "Latin Italic Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.no-unicoderange article blockquote i:lang(ja),
+.no-unicoderange article blockquote var:lang(ja) {
+	font-family: "Latin Italic Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+article figure blockquote:lang(zh-Latn),
+article figure blockquote:lang(ja-Latn),
+article figure blockquote:not(:lang(zh)):not(:lang(ja)),
+article figure blockquote *:lang(zh-Latn),
+article figure blockquote *:lang(ja-Latn),
+article figure blockquote *:not(:lang(zh)):not(:lang(ja)),
+figure blockquote:lang(zh-Latn),
+figure blockquote:lang(ja-Latn),
+figure blockquote:not(:lang(zh)):not(:lang(ja)),
+figure blockquote *:lang(zh-Latn),
+figure blockquote *:lang(ja-Latn),
+figure blockquote *:not(:lang(zh)):not(:lang(ja)) {
+	font-family: Georgia, "Times New Roman", "Han Songti", cursive, serif;
+}
+
+article figure blockquote:lang(zh),
+article figure blockquote:lang(zh-Hant),
+figure blockquote:lang(zh),
+figure blockquote:lang(zh-Hant) {
+	font-family: "Biaodian Pro Serif CNS", "Numeral LF Serif", Georgia, "Times New Roman", "Zhuyin Kaiti", "Han Songti", serif;
+}
+
+.no-unicoderange article figure blockquote:lang(zh),
+.no-unicoderange article figure blockquote:lang(zh-Hant),
+.no-unicoderange figure blockquote:lang(zh),
+.no-unicoderange figure blockquote:lang(zh-Hant) {
+	font-family: "Numeral LF Serif", Georgia, "Times New Roman", "Han Songti", serif;
+}
+
+article figure blockquote:lang(zh-Hans),
+article figure blockquote:lang(zh-CN),
+figure blockquote:lang(zh-Hans),
+figure blockquote:lang(zh-CN) {
+	font-family: "Biaodian Pro Serif GB", "Numeral LF Serif", Georgia, "Times New Roman", "Han Songti GB", serif;
+}
+
+.no-unicoderange article figure blockquote:lang(zh-Hans),
+.no-unicoderange article figure blockquote:lang(zh-CN),
+.no-unicoderange figure blockquote:lang(zh-Hans),
+.no-unicoderange figure blockquote:lang(zh-CN) {
+	font-family: "Numeral LF Serif", Georgia, "Times New Roman", "Han Songti GB", serif;
+}
+
+article figure blockquote:lang(ja),
+figure blockquote:lang(ja) {
+	font-family: "Yakumono Serif", "Numeral LF Serif", Georgia, "Times New Roman", serif;
+}
+
+.no-unicoderange article figure blockquote:lang(ja),
+.no-unicoderange figure blockquote:lang(ja) {
+	font-family: "Numeral LF Serif", Georgia, "Times New Roman", serif;
+}
+
+/**
+ * Serif Italic
+ */
+article blockquote:lang(zh-Latn),
+article blockquote:lang(ja-Latn),
+article blockquote:not(:lang(zh)):not(:lang(ja)),
+article blockquote *:lang(zh-Latn),
+article blockquote *:lang(ja-Latn),
+article blockquote *:not(:lang(zh)):not(:lang(ja)) {
+	font-family: Georgia, "Times New Roman", "Han Kaiti", cursive, serif;
+}
+
+article blockquote:lang(zh),
+article blockquote:lang(zh-Hant) {
+	font-family: "Biaodian Pro Serif CNS", "Numeral LF Serif", Georgia, "Times New Roman", "Zhuyin Kaiti", "Han Kaiti", cursive, serif;
+}
+
+.no-unicoderange article blockquote:lang(zh),
+.no-unicoderange article blockquote:lang(zh-Hant) {
+	font-family: "Numeral LF Serif", Georgia, "Times New Roman", "Han Kaiti", cursive, serif;
+}
+
+article blockquote:lang(zh-Hans),
+article blockquote:lang(zh-CN) {
+	font-family: "Biaodian Pro Serif GB", "Numeral LF Serif", Georgia, "Times New Roman", "Han Kaiti GB", cursive, serif;
+}
+
+.no-unicoderange article blockquote:lang(zh-Hans),
+.no-unicoderange article blockquote:lang(zh-CN) {
+	font-family: "Numeral LF Serif", Georgia, "Times New Roman", "Han Kaiti GB", cursive, serif;
+}
+
+article blockquote:lang(ja) {
+	font-family: "Yakumono Serif", "Numeral LF Serif", Georgia, "Times New Roman", cursive, serif;
+}
+
+.no-unicoderange article blockquote:lang(ja) {
+	font-family: "Numeral LF Serif", Georgia, "Times New Roman", cursive, serif;
+}
+
+/**
+ * Cursive Italic
+ */
+i:lang(zh-Latn),
+i:lang(ja-Latn),
+i:not(:lang(zh)):not(:lang(ja)),
+i *:lang(zh-Latn),
+i *:lang(ja-Latn),
+i *:not(:lang(zh)):not(:lang(ja)),
+var:lang(zh-Latn),
+var:lang(ja-Latn),
+var:not(:lang(zh)):not(:lang(ja)),
+var *:lang(zh-Latn),
+var *:lang(ja-Latn),
+var *:not(:lang(zh)):not(:lang(ja)) {
+	font-family: "Latin Italic Serif", Georgia, "Times New Roman", "Han Kaiti", cursive, serif;
+}
+
+i:lang(zh),
+i:lang(zh-Hant),
+var:lang(zh),
+var:lang(zh-Hant) {
+	font-family: "Biaodian Pro Serif CNS", "Numeral LF Italic Serif", "Latin Italic Serif", Georgia, "Times New Roman", "Zhuyin Kaiti", "Han Kaiti", cursive, serif;
+}
+
+
+i:lang(zh-Hans),
+i:lang(zh-CN),
+var:lang(zh-Hans),
+var:lang(zh-CN) {
+	font-family: "Biaodian Pro Serif GB", "Numeral LF Italic Serif", "Latin Italic Serif", Georgia, "Times New Roman", "Han Kaiti GB", cursive, serif;
+}
+
+i:lang(ja),
+var:lang(ja) {
+	font-family: "Yakumono Serif", "Numeral LF Italic Serif", "Latin Italic Serif", Georgia, "Times New Roman", cursive, serif;
+}
+
+.no-unicoderange i:lang(ja),
+.no-unicoderange var:lang(ja) {
+	font-family: "Numeral LF Italic Serif", "Latin Italic Serif", Georgia, "Times New Roman", cursive, serif;
+}
+
+code:lang(zh-Latn),
+code:lang(ja-Latn),
+code:not(:lang(zh)):not(:lang(ja)),
+code *:lang(zh-Latn),
+code *:lang(ja-Latn),
+code *:not(:lang(zh)):not(:lang(ja)),
+kbd:lang(zh-Latn),
+kbd:lang(ja-Latn),
+kbd:not(:lang(zh)):not(:lang(ja)),
+kbd *:lang(zh-Latn),
+kbd *:lang(ja-Latn),
+kbd *:not(:lang(zh)):not(:lang(ja)),
+samp:lang(zh-Latn),
+samp:lang(ja-Latn),
+samp:not(:lang(zh)):not(:lang(ja)),
+samp *:lang(zh-Latn),
+samp *:lang(ja-Latn),
+samp *:not(:lang(zh)):not(:lang(ja)),
+pre:lang(zh-Latn),
+pre:lang(ja-Latn),
+pre:not(:lang(zh)):not(:lang(ja)),
+pre *:lang(zh-Latn),
+pre *:lang(ja-Latn),
+pre *:not(:lang(zh)):not(:lang(ja)) {
+	font-family: Menlo, Consolas, Courier, "Han Heiti", monospace, monospace, sans-serif;
+}
+
+code:lang(zh),
+code:lang(zh-Hant),
+kbd:lang(zh),
+kbd:lang(zh-Hant),
+samp:lang(zh),
+samp:lang(zh-Hant),
+pre:lang(zh),
+pre:lang(zh-Hant) {
+	font-family: "Biaodian Pro Sans CNS", Menlo, Consolas, Courier, "Zhuyin Heiti", "Han Heiti", monospace, monospace, sans-serif;
+}
+
+code:lang(zh-Hans),
+code:lang(zh-CN),
+kbd:lang(zh-Hans),
+kbd:lang(zh-CN),
+samp:lang(zh-Hans),
+samp:lang(zh-CN),
+pre:lang(zh-Hans),
+pre:lang(zh-CN) {
+	font-family: "Biaodian Pro Sans GB", Menlo, Consolas, Courier, "Han Heiti GB", monospace, monospace, sans-serif;
+}
+
+
+html,
+[lang^="zh"],
+[lang*="Hant"],
+[lang="zh-TW"],
+[lang="zh-HK"],
+[lang*="Hans"],
+[lang="zh-CN"],
+article strong,
+code,
+kbd,
+samp,
+pre,
+article blockquote i,
+article blockquote var {
+	-moz-font-feature-settings: "liga=1, locl=0";
+	-ms-font-feature-settings: "liga", "locl" 0;
+	-webkit-font-feature-settings: "liga", "locl" 0;
+	font-feature-settings: "liga", "locl" 0;
+}
+
+i,
+var {
+	font-style: inherit;
+}
+
+
+/*  Section-wise arrangement
+   -------------------------- */
+/**
+ * Well-knit sections for articles
+ */
+article {
+	line-height: 1.7;
+}
+article {
+	-moz-hyphens: auto;
+	-ms-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
+}
+article p,
+article li {
+	text-align: justify;
+	text-justify: inter-ideograph;
+}
+article h1 + blockquote,
+article h1 + p,
+article h1 + ol,
+article h1 + ul,
+article h1 + h6,
+article h1 + section > h6:first-child,
+article h1 + section > p:first-child,
+article h1 + section > ol:first-child,
+article h1 + section > ul:first-child,
+article h1 + section > blockquote:first-child,
+article h2 + blockquote,
+article h2 + p,
+article h2 + ol,
+article h2 + ul,
+article h2 + h6,
+article h2 + section > h6:first-child,
+article h2 + section > p:first-child,
+article h2 + section > ol:first-child,
+article h2 + section > ul:first-child,
+article h2 + section > blockquote:first-child,
+article h3 + blockquote,
+article h3 + p,
+article h3 + ol,
+article h3 + ul,
+article h3 + h6,
+article h3 + section > h6:first-child,
+article h3 + section > p:first-child,
+article h3 + section > ol:first-child,
+article h3 + section > ul:first-child,
+article h3 + section > blockquote:first-child,
+article h4 + blockquote,
+article h4 + p,
+article h4 + ol,
+article h4 + ul,
+article h4 + h6,
+article h4 + section > h6:first-child,
+article h4 + section > p:first-child,
+article h4 + section > ol:first-child,
+article h4 + section > ul:first-child,
+article h4 + section > blockquote:first-child,
+article h5 + blockquote,
+article h5 + p,
+article h5 + ol,
+article h5 + ul,
+article h5 + h6,
+article h5 + section > h6:first-child,
+article h5 + section > p:first-child,
+article h5 + section > ol:first-child,
+article h5 + section > ul:first-child,
+article h5 + section > blockquote:first-child,
+article h6 + blockquote,
+article h6 + p,
+article h6 + ol,
+article h6 + ul,
+article h6 + h6,
+article h6 + section > h6:first-child,
+article h6 + section > p:first-child,
+article h6 + section > ol:first-child,
+article h6 + section > ul:first-child,
+article h6 + section > blockquote:first-child,
+article h1 + h5,
+article h1 + section > h5:first-child,
+article h2 + h5,
+article h2 + section > h5:first-child,
+article h3 + h5,
+article h3 + section > h5:first-child,
+article h4 + h5,
+article h4 + section > h5:first-child,
+article h5 + h5,
+article h5 + section > h5:first-child,
+article h1 + h4,
+article h1 + section > h4:first-child,
+article h2 + h4,
+article h2 + section > h4:first-child,
+article h3 + h4,
+article h3 + section > h4:first-child,
+article h4 + h4,
+article h4 + section > h4:first-child,
+article h1 + h3,
+article h1 + section > h3:first-child,
+article h2 + h3,
+article h2 + section > h3:first-child,
+article h3 + h3,
+article h3 + section > h3:first-child,
+article h1 + h2,
+article h1 + section > h2:first-child,
+article h2 + h2,
+article h2 + section > h2:first-child {
+	/*margin-top: -1em;*/
+}
+
+
+@media only screen and (max-width: 480px) {
+	p.poem-like,
+	.poem-like p {
+		margin-left: 1em;
+	}
+}
+
+article blockquote {
+	margin-right: 0;
+}
+@media only screen and (max-width: 480px) {
+	article blockquote {
+		margin-left: 1em;
+	}
+}
+
+figure blockquote {
+	margin: 0;
+}
+
+blockquote blockquote {
+	margin-left: 1em;
+	margin-right: 1em;
+}
+article blockquote blockquote {
+	margin-right: 0;
+}
+
+@media only screen and (max-width: 480px) {
+	blockquote,
+	figure {
+		margin-left: 1em;
+		margin-right: 1em;
+	}
+}
+p {
+	margin-bottom: 1.5em;
+}
+
+dfn,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+i:lang(zh),
+i:lang(ja),
+var:lang(zh),
+var:lang(ja) {
+	font-family: cursive, serif;
+	font-style: inherit;
+}
+
+blockquote {
+	margin: 0 1.5em;
+}
+
+address {
+	margin: 0 0 1.5em;
+}
+
+pre {
+	background: #eee;
+	font-family: "Courier 10 Pitch", Courier, monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+	line-height: 1.6;
+	margin-bottom: 1.6em;
+	max-width: 100%;
+	overflow: auto;
+	padding: 1.6em;
+}
+
+code,
+kbd,
+tt,
+var {
+	font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+	font-size: 15px;
+	font-size: 0.9375rem;
+}
+
+abbr,
+acronym {
+	border-bottom: 1px dotted #666;
+	cursor: help;
+}
+
+mark,
+ins {
+	background: #fff9c0;
+	text-decoration: none;
+}
+
+big {
+	font-size: 125%;
+}
+
+em:lang(zh),
+em:lang(ja) {
+	-moz-text-emphasis: filled circle;
+	-webkit-text-emphasis: filled circle;
+	text-emphasis: filled circle;
+	-moz-text-emphasis-position: under;
+	-webkit-text-emphasis-position: under;
+	text-emphasis-position: under;
+	font-style: inherit;
+	border-bottom: 2px dotted;
+	padding-bottom: .05em;
+	border-bottom-width: -webkit-calc( 0px);
+	padding-bottom: -webkit-calc( 0px);
+}
+
+strong,
+dfn:lang(zh),
+dfn:lang(ja),
+b {
+	font-weight: inherit;
+}
+
+strong,
+dfn:lang(zh),
+dfn:lang(ja),
+b {
+	font-weight: bolder;
+}
+
+dfn:lang(zh),
+dfn:lang(ja) {
+	font-style: inherit;
+}
+
+cite:lang(zh),
+cite:lang(ja) {
+	font-style: inherit;
+}
+
+q {
+	quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019";
+}
+q:lang(zh) {
+	quotes: "\300c" "\300d" "\300e" "\300f" "\300c" "\300d" "\300e" "\300f" "\300c" "\300d" "\300e" "\300f";
+}
+q:lang(zh-CN),
+q:lang(en) {
+	quotes: "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019";
+}
+q:lang(en-GB) {
+	quotes: "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d" "\2018" "\2019" "\201c" "\201d";
+}
+q:before {
+	content: open-quote;
+}
+q:after {
+	content: close-quote;
+}
+
+
+
+/*--------------------------------------------------------------
+# Elements
+--------------------------------------------------------------*/
+html {
+	line-height: 1.3;
+	-webkit-font-smoothing: subpixel-antialiased;
+}
+
+*,
+*:before,
+*:after { /* Inherit box-sizing to make it easier to change the property for components that leverage other behavior; see http://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/ */
+	box-sizing: inherit;
+}
+
+body {
+	background: #fff; /* Fallback for when there is no custom background color defined. */
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+	content: "";
+}
+
+blockquote,
+q {
+	quotes: "" "";
+}
+
+hr {
+	background-color: #ccc;
+	border: 0;
+	height: 1px;
+	margin-bottom: 1.5em;
+}
+
+ul, ol {
+	padding-left: 1em;
+}
+
+ul {
+	list-style: disc;
+}
+
+ol {
+	list-style: decimal;
+}
+
+li > ul,
+li > ol {
+	margin-bottom: 0;
+	margin-left: 1.5em;
+}
+
+li {
+	padding-left: .5em;
+}
+
+dt {
+	font-weight: bold;
+}
+
+dd {
+	margin: 0 1.5em 1.5em;
+}
+
+img {
+	height: auto; /* Make sure images are scaled correctly. */
+	max-width: 100%; /* Adhere to container width. */
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin: 0 0 1.5em;
+	width: 100%;
+}
+
+td,
+th {
+	padding: 0;
+}
+
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+	border: 1px solid;
+	border-color: #ccc #ccc #bbb;
+	border-radius: 3px;
+	background: #e6e6e6;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.5), inset 0 15px 17px rgba(255, 255, 255, 0.5), inset 0 -5px 12px rgba(0, 0, 0, 0.05);
+	color: rgba(0, 0, 0, .8);
+	font-size: 12px;
+	font-size: 0.75rem;
+	line-height: 1;
+	padding: .6em 1em .4em;
+	text-shadow: 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+button:hover,
+input[type="button"]:hover,
+input[type="reset"]:hover,
+input[type="submit"]:hover {
+	border-color: #ccc #bbb #aaa;
+	box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.8), inset 0 15px 17px rgba(255, 255, 255, 0.8), inset 0 -5px 12px rgba(0, 0, 0, 0.02);
+}
+
+button:focus,
+input[type="button"]:focus,
+input[type="reset"]:focus,
+input[type="submit"]:focus,
+button:active,
+input[type="button"]:active,
+input[type="reset"]:active,
+input[type="submit"]:active {
+	border-color: #aaa #bbb #bbb;
+	box-shadow: inset 0 -1px 0 rgba(255, 255, 255, 0.5), inset 0 2px 5px rgba(0, 0, 0, 0.15);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"],
+textarea {
+	color: #666;
+	border: 1px solid #ccc;
+	border-radius: 3px;
+}
+
+select {
+	border: 1px solid #ccc;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="password"]:focus,
+input[type="search"]:focus,
+input[type="number"]:focus,
+input[type="tel"]:focus,
+input[type="range"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="week"]:focus,
+input[type="time"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="color"]:focus,
+textarea:focus {
+	color: #111;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="url"],
+input[type="password"],
+input[type="search"],
+input[type="number"],
+input[type="tel"],
+input[type="range"],
+input[type="date"],
+input[type="month"],
+input[type="week"],
+input[type="time"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="color"] {
+	padding: 3px;
+}
+
+textarea {
+	padding-left: 3px;
+	width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Navigation
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Links
+--------------------------------------------------------------*/
+a {
+	color: #616161;
+	text-decoration: none;
+}
+
+a:visited {
+	/*color: purple;*/
+}
+
+a:hover,
+a:focus,
+a:active {
+	color: #ff9800;
+}
+
+a:focus {
+	outline: thin dotted;
+}
+
+a:hover,
+a:active {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	height: 64px;
+	position:fixed;
+	top:0;
+	clear: both;
+	display: block;
+	width: 100%;
+	background-color: #009688;
+	color:white;
+	/*z-depth-1.5*/
+	box-shadow: 0 5px 11px 0 rgba(0, 0, 0, 0.18), 0 4px 15px 0 rgba(0, 0, 0, 0.15); ;
+}
+
+.admin-bar .main-navigation {
+	top: 32px;
+}
+
+.main-navigation ul {
+	box-sizing: border-box;
+	display: none;
+	list-style: none;
+	margin: 0 auto;
+	padding-left: 0;
+	text-align: center;
+}
+
+.main-navigation li {
+	display: inline-block;
+	position: relative;
+	padding-left: 1.5em;
+	line-height:64px;
+}
+
+.main-navigation a {
+	display: block;
+	height: 64px;
+	text-decoration: none;
+	color: white;
+}
+
+.main-navigation a:hover{
+	border-bottom: 3px white solid;
+}
+
+.main-navigation ul ul {
+	box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+	float: left;
+	position: absolute;
+	top: 1.5em;
+	left: -999em;
+	z-index: 99999;
+}
+
+.main-navigation ul ul ul {
+	left: -999em;
+	top: 0;
+}
+
+.main-navigation ul ul a {
+	width: 200px;
+}
+
+.main-navigation ul ul li {
+
+}
+
+.main-navigation li:hover > a,
+.main-navigation li.focus > a {
+}
+
+.main-navigation ul ul :hover > a,
+.main-navigation ul ul .focus > a {
+}
+
+.main-navigation ul ul a:hover,
+.main-navigation ul ul a.focus {
+}
+
+.main-navigation ul li:hover > ul,
+.main-navigation ul li.focus > ul {
+	left: auto;
+}
+
+.main-navigation ul ul li:hover > ul,
+.main-navigation ul ul li.focus > ul {
+	left: 100%;
+}
+
+.main-navigation .current_page_item > a,
+.main-navigation .current-menu-item > a,
+.main-navigation .current_page_ancestor > a,
+.main-navigation .current-menu-ancestor > a {
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
+
+/*--------------------------------------------------------------
+# Accessibility
+--------------------------------------------------------------*/
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-size: 0.875rem;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar. */
+}
+
+/* Do not show the outline on the skip link target. */
+#content[tabindex="-1"]:focus {
+	outline: 0;
+}
+
+/*--------------------------------------------------------------
+# Alignments
+--------------------------------------------------------------*/
+.alignleft {
+	display: inline;
+	float: left;
+	margin-right: 1.5em;
+}
+
+.alignright {
+	display: inline;
+	float: right;
+	margin-left: 1.5em;
+}
+
+.aligncenter {
+	clear: both;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/*--------------------------------------------------------------
+# Clearings
+--------------------------------------------------------------*/
+.clear:before,
+.clear:after,
+.entry-content:before,
+.entry-content:after,
+.comment-content:before,
+.comment-content:after,
+.site-header:before,
+.site-header:after,
+.site-content:before,
+.site-content:after,
+.site-footer:before,
+.site-footer:after {
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.clear:after,
+.entry-content:after,
+.comment-content:after,
+.site-header:after,
+.site-content:after,
+.site-footer:after {
+	clear: both;
+}
+
+/*--------------------------------------------------------------
+# Widgets
+--------------------------------------------------------------*/
+.widget {
+	margin: 0 0 1.5em;
+}
+
+/* Make sure select elements fit in widgets. */
+.widget select {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+# Content
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+## Posts and pages
+--------------------------------------------------------------*/
+.sticky {
+	display: block;
+}
+
+.hentry {
+	margin: 0 0 1.5em;
+}
+
+.byline,
+.updated:not(.published) {
+	display: none;
+}
+
+.single .byline,
+.group-blog .byline {
+	display: inline;
+}
+
+.page-content,
+.entry-content,
+.entry-summary {
+	margin: 1.5em 0 0;
+}
+
+.page-links {
+	clear: both;
+	margin: 0 0 1.5em;
+}
+
+article.post {
+	/*z-depth-1*/
+	box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+	padding: 1.8em;
+}
+
+article.post .entry-title {
+	margin-top:0;
+}
+
+article.post .entry-title a {
+	color: #009688;
+}
+
+article.post h1,
+article.post h2,
+article.post h3 {
+	color:#757575 /* # grey 600 */
+}
+
+
+
+/*--------------------------------------------------------------
+## Asides
+--------------------------------------------------------------*/
+.blog .format-aside .entry-title,
+.archive .format-aside .entry-title {
+	display: none;
+}
+
+/*--------------------------------------------------------------
+## Comments
+--------------------------------------------------------------*/
+.comment-content a {
+	word-wrap: break-word;
+}
+
+.bypostauthor {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Infinite scroll
+--------------------------------------------------------------*/
+/* Globally hidden elements when Infinite Scroll is supported and in use. */
+.infinite-scroll .posts-navigation, /* Older / Newer Posts Navigation (always hidden) */
+.infinite-scroll.neverending .site-footer { /* Theme Footer (when set to scrolling) */
+	display: none;
+}
+
+/* When Infinite Scroll has reached its end we need to re-display elements that were hidden (via .neverending) before. */
+.infinity-end.neverending .site-footer {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+	border: none;
+	margin-bottom: 0;
+	margin-top: 0;
+	padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+	max-width: 100%;
+}
+
+/*--------------------------------------------------------------
+## Captions
+--------------------------------------------------------------*/
+.wp-caption {
+	margin-bottom: 1.5em;
+	max-width: 100%;
+}
+
+.wp-caption img[class*="wp-image-"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.wp-caption .wp-caption-text {
+	margin: 0.8075em 0;
+}
+
+.wp-caption-text {
+	text-align: center;
+}
+
+/*--------------------------------------------------------------
+## Galleries
+--------------------------------------------------------------*/
+.gallery {
+	margin-bottom: 1.5em;
+}
+
+.gallery-item {
+	display: inline-block;
+	text-align: center;
+	vertical-align: top;
+	width: 100%;
+}
+
+.gallery-columns-2 .gallery-item {
+	max-width: 50%;
+}
+
+.gallery-columns-3 .gallery-item {
+	max-width: 33.33%;
+}
+
+.gallery-columns-4 .gallery-item {
+	max-width: 25%;
+}
+
+.gallery-columns-5 .gallery-item {
+	max-width: 20%;
+}
+
+.gallery-columns-6 .gallery-item {
+	max-width: 16.66%;
+}
+
+.gallery-columns-7 .gallery-item {
+	max-width: 14.28%;
+}
+
+.gallery-columns-8 .gallery-item {
+	max-width: 12.5%;
+}
+
+.gallery-columns-9 .gallery-item {
+	max-width: 11.11%;
+}
+
+.gallery-caption {
+	display: block;
+}
+
+/*--------------------------------------------------------------
+## layout
+--------------------------------------------------------------*/
+/* general */
+
+.site-content {
+	width: 66.67%;
+	margin: 80px auto;
+
+}
+
+.content-area {
+	float: right;
+	margin: 0 0 0 -37.5%;
+	width: 100%;
+}
+.site-main {
+	width: 62.5%;
+	margin: 0 0 0 37.5%;
+}
+.site-content .widget-area {
+	float: left;
+	overflow: hidden;
+	width: 37.5%;
+	box-sizing: border-box;
+	padding-right: 2em;
+}
+.site-footer {
+	clear: both;
+	width: 100%;
+}
+
+/* sidebar */
+
+.site-content .widget-area h2{
+	color: #ffb74d; /*# orange 300*/
+	font-size: 1.2em;
+}
+
+
+/* home */
+
+.home article .entry-content h2 {
+	font-size: 1.2em;
+}
+
+
+/* # color
+
+orange-primary: #ff9800
+
+*/
+
