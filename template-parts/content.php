@@ -21,6 +21,7 @@
 		if ( 'post' === get_post_type() ) : ?>
 		<div class="entry-meta">
 			<?php material_blog_posted_on(); ?>
+			<?php material_blog_entry_footer(); ?>
 		</div><!-- .entry-meta -->
 		<?php
 		endif; ?>
@@ -42,6 +43,12 @@
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php material_blog_entry_footer(); ?>
+		<?php
+			if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
+			echo '<span class="comments-link">';
+			comments_popup_link( esc_html__( '评论', 'material-blog' ), esc_html__( '1 个评论', 'material-blog' ), esc_html__( '% 个评论', 'material-blog' ) );
+			echo '</span>';
+		}?>
+		<?php /*material_blog_entry_footer(); */?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
